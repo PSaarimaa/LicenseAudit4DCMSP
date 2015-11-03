@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B76652D-759A-4EDB-A636-678B10E8E24B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LicenseAudit</RootNamespace>
+    <AssemblyName>LicenseAudit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hopstarter-Sleek-Xp-Basic-Document-Write.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSVData.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="frmMapAddInstalledItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapAddInstalledItem.Designer.cs">
+      <DependentUpon>frmMapAddInstalledItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMapInstToSoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapInstToSoftware.Designer.cs">
+      <DependentUpon>frmMapInstToSoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMapSuites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapSuites.Designer.cs">
+      <DependentUpon>frmMapSuites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRdPreviewInstallData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdPreviewInstallData.Designer.cs">
+      <DependentUpon>frmRdPreviewInstallData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRdViewComputersWithInstalledItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdViewComputersWithInstalledItem.Designer.cs">
+      <DependentUpon>frmRdViewComputersWithInstalledItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRdViewDistinctInstalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdViewDistinctInstalls.Designer.cs">
+      <DependentUpon>frmRdViewDistinctInstalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRdViewSoftwareItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdViewSoftwareItems.Designer.cs">
+      <DependentUpon>frmRdViewSoftwareItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportLicensesWithoutDowngrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportLicensesWithoutDowngrade.Designer.cs">
+      <DependentUpon>frmReportLicensesWithoutDowngrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateFromDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateFromDC.Designer.cs">
+      <DependentUpon>frmUpdateFromDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmRdViewInstallData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdViewInstallData.Designer.cs">
+      <DependentUpon>frmRdViewInstallData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRdImportLicenseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRdImportLicenseData.Designer.cs">
+      <DependentUpon>frmRdImportLicenseData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMapAddInstalledItem.resx">
+      <DependentUpon>frmMapAddInstalledItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMapInstToSoftware.resx">
+      <DependentUpon>frmMapInstToSoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMapSuites.resx">
+      <DependentUpon>frmMapSuites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRdPreviewInstallData.resx">
+      <DependentUpon>frmRdPreviewInstallData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRdViewComputersWithInstalledItem.resx">
+      <DependentUpon>frmRdViewComputersWithInstalledItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRdViewDistinctInstalls.resx">
+      <DependentUpon>frmRdViewDistinctInstalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRdViewInstallData.resx">
+      <DependentUpon>frmRdViewInstallData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRdViewSoftwareItems.resx">
+      <DependentUpon>frmRdViewSoftwareItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportLicensesWithoutDowngrade.resx">
+      <DependentUpon>frmReportLicensesWithoutDowngrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateFromDC.resx">
+      <DependentUpon>frmUpdateFromDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmRdImportLicenseData.resx">
+      <DependentUpon>frmRdImportLicenseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hopstarter-Sleek-Xp-Basic-Document-Write.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
